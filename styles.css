@@ -5,7 +5,6 @@
     --brand-color: #6366F1;
     --header-bg: #2c3e50;
     --grid-item-bg: #bdc3c7;
-    /* Grey background as in wireframe */
     --white: #ffffff;
 }
 
@@ -23,7 +22,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
+img {
+    
+}
 /* Header Sticky */
 .header {
     background-color: var(--header-bg);
@@ -91,64 +92,107 @@ body {
     grid-template-columns: 1fr;
 }
 
-/* Card Styling (Simplified to match wireframe aesthetics) */
+/* Card Styling (Simple) */
 .card {
-    background-color: var(--grid-item-bg);
-    /* Grey background */
-    color: black;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 4px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-    /* Removed border for cleaner look */
-    border-radius: 0;
-    /* Removed radius */
-    font-weight: bold;
+    height: 100%;
 }
 
 .card__title {
-    font-size: 1.5rem;
-    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
-/* Hide extra content to match "simple" request if needed, 
-   but keeping it for now as user said "contenido puede ser relleno" */
-.card__content p,
-.card__button,
-.tags,
-.card__image-container {
-    /* Optional: display: none; if we want EXACT wireframe look */
+.card__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    background-color: #eee;
+}
+
+.tags {
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
 }
 
 /* Tablet Layout (640px - 1023px) */
 @media (min-width: 640px) {
     .grid-container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(10,150px);
-        /* Fixed height rows to match blocky look */
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(150px, auto);
     }
 
-.div1 { grid-area: 1 / 1 / 3 / 3; }
-.div2 { grid-area: 1 / 3 / 2 / 4; }
-.div3 { grid-area: 2 / 3 / 3 / 4; }
-.div4 { grid-area: 3 / 1 / 4 / 2; }
-.div5 { grid-area: 4 / 1 / 5 / 2; }
-.div6 { grid-area: 3 / 2 / 5 / 4; }
-.div7 { grid-area: 5 / 1 / 7 / 3; }
-.div8 { grid-area: 5 / 3 / 6 / 4; }
-.div9 { grid-area: 6 / 3 / 7 / 4; }
-.div10 { grid-area: 7 / 1 / 8 / 2; }
-.div11 { grid-area: 8 / 1 / 9 / 2; }
-.div12 { grid-area: 7 / 2 / 9 / 4; }
-.div13 { grid-area: 9 / 1 / 11 / 3; }
-.div14 { grid-area: 9 / 3 / 10 / 4; }
-.div15 { grid-area: 10 / 3 / 11 / 4; }
-    
-    /* Flow rest naturally or hide if not in design */
+    /* Specific Grid Placements for Tablet */
+    .div1 {
+        grid-column: 1 / span 2;
+        grid-row: span 2;
+    }
+
+    .div2 {
+        grid-column: 3;
+    }
+
+    .div3 {
+        grid-column: 3;
+    }
+
+    .div4 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .div10 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .div11 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .div5 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .div6 {
+        grid-column: 2 / span 2;
+        grid-row: 4 / span 2;
+    }
+
+    .div12 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .div7 {
+        grid-column: 1 / span 2;
+        grid-row: 6 / span 2;
+    }
+
+    .div8 {
+        grid-column: 3;
+        grid-row: 6;
+    }
+
+    .div9 {
+        grid-column: 3;
+        grid-row: 7;
+    }
 }
 
 /* Desktop Layout (>= 1024px) */
@@ -175,18 +219,16 @@ grid-template-rows: repeat(10,150px);
 
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 150px);
-        /* Fixed height rows */
-        gap: 1rem;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 0;
+        /* As per original file */
     }
 
-    /* Specific Grid Areas for Desktop based on image */
-    /* Row 1 & 2 */
+    /* Specific Grid Areas for Desktop */
     .div1 {
         grid-area: 1 / 1 / 3 / 3;
     }
 
-    /* Top Left 2x2 */
     .div2 {
         grid-area: 1 / 3 / 2 / 4;
     }
@@ -203,7 +245,6 @@ grid-template-rows: repeat(10,150px);
         grid-area: 2 / 4 / 3 / 5;
     }
 
-    /* Row 3 & 4 */
     .div6 {
         grid-area: 3 / 1 / 4 / 2;
     }
@@ -212,11 +253,6 @@ grid-template-rows: repeat(10,150px);
         grid-area: 3 / 2 / 4 / 3;
     }
 
-    .div10 {
-        grid-area: 3 / 3 / 5 / 5;
-    }
-
-    /* Middle Right 2x2 */
     .div8 {
         grid-area: 4 / 1 / 5 / 2;
     }
@@ -225,12 +261,14 @@ grid-template-rows: repeat(10,150px);
         grid-area: 4 / 2 / 5 / 3;
     }
 
-    /* Row 5 & 6 */
+    .div10 {
+        grid-area: 3 / 3 / 5 / 5;
+    }
+
     .div11 {
         grid-area: 5 / 1 / 7 / 3;
     }
 
-    /* Bottom Left 2x2 */
     .div12 {
         grid-area: 5 / 3 / 6 / 4;
     }
@@ -267,8 +305,6 @@ grid-template-rows: repeat(10,150px);
 
 .social-menu__link svg {
     stroke: white;
-    width: 24px;
-    height: 24px;
 }
 
 /* Extra Components (Simple) */

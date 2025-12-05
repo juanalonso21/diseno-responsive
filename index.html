@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Responsive Grid</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -14,132 +14,107 @@
         <div class="header__container">
             <a href="#" class="header__logo">Brand</a>
             <button class="header__toggle" id="menuToggle" aria-label="Menú">
-                <span class="header__toggle-icon"></span>
+                <span class="header__toggle-icon">☰</span>
             </button>
             <nav class="header__nav" id="mainNav">
                 <ul class="menu">
                     <li class="menu__item"><a href="#" class="menu__link">Inicio</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Artículos</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Servicios</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
                 </ul>
             </nav>
+            <!-- Social Menu in Header as per image -->
+            <ul class="social-menu header__social">
+                <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-menu__item">
+                    <a href="#" class="social-menu__link" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
     <main class="main-content">
-
-        <!-- Grid de Artículos (Cards) -->
-        <section class="articles-grid">
-            <!-- Generando varias cards para demostración -->
-            <article class="card">
-                <div class="card__image-container">
-                    <img src="https://picsum.photos/id/101/400/300" alt="Imagen artículo 1" class="card__image">
-                </div>
-                <div class="card__content">
-                    <div class="tags">
-                        <span class="tag">Tech</span>
-                        <span class="tag">Design</span>
-                    </div>
-                    <h2 class="card__title">Diseño Responsive Moderno</h2>
-                    <p class="card__excerpt">Aprende a crear layouts fluidos con CSS Grid y Flexbox para cualquier
-                        dispositivo.</p>
-                    <a href="#" class="card__button">Leer más</a>
-                </div>
+        <section class="grid-container">
+            <!-- 15 Items for the Grid Layout -->
+            <article class="card div1">
+                <figure>
+                    <img src="images/picture.png">
+                </figure>
+                <h2 class="card__title">1</h2>
+                
             </article>
-
-            <article class="card">
-                <div class="card__image-container">
-                    <img src="https://picsum.photos/id/102/400/300" alt="Imagen artículo 2" class="card__image">
-                </div>
-                <div class="card__content">
-                    <div class="tags">
-                        <span class="tag">CSS</span>
-                    </div>
-                    <h2 class="card__title">Variables CSS</h2>
-                    <p class="card__excerpt">Optimiza tu código usando Custom Properties para un mantenimiento más
-                        sencillo.</p>
-                    <a href="#" class="card__button">Leer más</a>
-                </div>
+            <article class="card div2">
+                <h2 class="card__title">2</h2>
             </article>
-
-            <article class="card">
-                <div class="card__image-container">
-                    <img src="https://picsum.photos/id/103/400/300" alt="Imagen artículo 3" class="card__image">
-                </div>
-                <div class="card__content">
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">A11y</span>
-                    </div>
-                    <h2 class="card__title">Accesibilidad Web</h2>
-                    <p class="card__excerpt">Guía práctica para hacer tu sitio web accesible para todos los usuarios.
-                    </p>
-                    <a href="#" class="card__button">Leer más</a>
-                </div>
+            <article class="card div3">
+                <h2 class="card__title">3</h2>
             </article>
-
-            <article class="card">
-                <div class="card__image-container">
-                    <img src="https://picsum.photos/id/104/400/300" alt="Imagen artículo 4" class="card__image">
-                </div>
-                <div class="card__content">
-                    <div class="tags">
-                        <span class="tag">Dev</span>
-                    </div>
-                    <h2 class="card__title">Mobile First</h2>
-                    <p class="card__excerpt">La importancia de diseñar pensando primero en dispositivos móviles.</p>
-                    <a href="#" class="card__button">Leer más</a>
-                </div>
+            <article class="card div4">
+                <h2 class="card__title">4</h2>
             </article>
-            <article class="card">
-                <div class="card__image-container">
-                    <img src="https://picsum.photos/id/106/400/300" alt="Imagen artículo 5" class="card__image">
-                </div>
-                <div class="card__content">
-                    <div class="tags">
-                        <span class="tag">Grid</span>
-                    </div>
-                    <h2 class="card__title">Grid Layout</h2>
-                    <p class="card__excerpt">Domina el sistema de rejilla bidimensional de CSS.</p>
-                    <a href="#" class="card__button">Leer más</a>
-                </div>
+            <article class="card div5">
+                <h2 class="card__title">5</h2>
             </article>
-            <article class="card">
-                <div class="card__image-container">
-                    <img src="https://picsum.photos/id/108/400/300" alt="Imagen artículo 6" class="card__image">
-                </div>
-                <div class="card__content">
-                    <div class="tags">
-                        <span class="tag">Flexbox</span>
-                    </div>
-                    <h2 class="card__title">Flexbox Guide</h2>
-                    <p class="card__excerpt">Alineación y distribución de espacio simplificada.</p>
-                    <a href="#" class="card__button">Leer más</a>
-                </div>
+            <article class="card div6">
+                <h2 class="card__title">6</h2>
+            </article>
+            <article class="card div7">
+                <h2 class="card__title">7</h2>
+            </article>
+            <article class="card div8">
+                <h2 class="card__title">8</h2>
+            </article>
+            <article class="card div9">
+                <h2 class="card__title">9</h2>
+            </article>
+            <article class="card div10">
+                <h2 class="card__title">10</h2>
+            </article>
+            <article class="card div11">
+                <h2 class="card__title">11</h2>
+            </article>
+            <article class="card div12">
+                <h2 class="card__title">12</h2>
+            </article>
+            <article class="card div13">
+                <h2 class="card__title">13</h2>
+            </article>
+            <article class="card div14">
+                <h2 class="card__title">14</h2>
+            </article>
+            <article class="card div15">
+                <h2 class="card__title">15</h2>
             </article>
         </section>
 
-        <!-- Paginador -->
-        <nav class="pagination" aria-label="Paginación de artículos">
-            <ul class="pagination__list">
-                <li><a href="#" class="pagination__link pagination__link--prev" aria-label="Anterior">&laquo;</a></li>
-                <li><a href="#" class="pagination__link pagination__link--active" aria-current="page">1</a></li>
-                <li><a href="#" class="pagination__link">2</a></li>
-                <li><a href="#" class="pagination__link">3</a></li>
-                <li><span class="pagination__ellipsis">&hellip;</span></li>
-                <li><a href="#" class="pagination__link">8</a></li>
-                <li><a href="#" class="pagination__link pagination__link--next" aria-label="Siguiente">&raquo;</a></li>
-            </ul>
-        </nav>
-
-        <hr class="divider">
-
-        <!-- Sección de Componentes Extra (Tabla y Formulario) -->
+        <!-- Extra Components Section -->
         <section class="extra-components">
-
             <div class="component-block">
-                <h3 class="component-title">Tabla Responsive</h3>
+                <h3>Tabla Responsive</h3>
                 <div class="table-container">
                     <table class="data-table">
                         <thead>
@@ -147,31 +122,18 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Rol</th>
-                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="ID">001</td>
-                                <td data-label="Nombre">Ana García</td>
-                                <td data-label="Email">ana@example.com</td>
-                                <td data-label="Rol">Admin</td>
-                                <td data-label="Estado"><span class="status status--active">Activo</span></td>
+                                <td>1</td>
+                                <td>Ana</td>
+                                <td>ana@test.com</td>
                             </tr>
                             <tr>
-                                <td data-label="ID">002</td>
-                                <td data-label="Nombre">Carlos Ruiz</td>
-                                <td data-label="Email">carlos@example.com</td>
-                                <td data-label="Rol">Editor</td>
-                                <td data-label="Estado"><span class="status status--inactive">Inactivo</span></td>
-                            </tr>
-                            <tr>
-                                <td data-label="ID">003</td>
-                                <td data-label="Nombre">Maria Lopez</td>
-                                <td data-label="Email">maria@example.com</td>
-                                <td data-label="Rol">User</td>
-                                <td data-label="Estado"><span class="status status--active">Activo</span></td>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>bob@test.com</td>
                             </tr>
                         </tbody>
                     </table>
@@ -179,72 +141,29 @@
             </div>
 
             <div class="component-block">
-                <h3 class="component-title">Contacto</h3>
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Mensaje</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
+                <h3>Formulario</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nombre" class="form-input">
+                    <input type="email" placeholder="Email" class="form-input">
+                    <button type="submit" class="btn">Enviar</button>
                 </form>
             </div>
 
+            <!-- Paginador -->
+            <nav class="pagination" style="margin-top: 2rem; display: flex; justify-content: center; gap: 0.5rem;">
+                <button class="btn">Prev</button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">Next</button>
+            </nav>
         </section>
-
     </main>
 
     <footer class="footer">
-        <div class="footer__content">
-            <p class="footer__copyright">&copy; 2024 Diseño Responsive. Todos los derechos reservados.</p>
-            <nav class="social-nav">
-                <ul class="social-menu">
-                    <!-- Iconos SVG inline para no depender de librerías externas -->
-                    <li class="social-menu__item">
-                        <a href="#" class="social-menu__link" aria-label="Twitter">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-menu__item">
-                        <a href="#" class="social-menu__link" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-menu__item">
-                        <a href="#" class="social-menu__link" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <p>&copy; 2024 Brand. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Script simple para el menú hamburguesa
         document.getElementById('menuToggle').addEventListener('click', function () {
             document.getElementById('mainNav').classList.toggle('header__nav--active');
         });
