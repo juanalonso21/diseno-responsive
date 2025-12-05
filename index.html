@@ -64,7 +64,6 @@
                 <figure>
                     <img src="images/picture.png">
                 </figure>
-                <h2 class="card__title">1</h2>
                 
             </article>
             <article class="card div2">
@@ -92,10 +91,45 @@
                 <h2 class="card__title">9</h2>
             </article>
             <article class="card div10">
-                <h2 class="card__title">10</h2>
+                <div class="component-block">
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ana</td>
+                                    <td>ana@test.com</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Bob</td>
+                                    <td>bob@test.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </article>
             <article class="card div11">
-                <h2 class="card__title">11</h2>
+                <section class="extra-components">
+                    <div class="component-block">
+                        <form class="contact-form">
+                            <input type="text" placeholder="Nombre" class="form-input">
+                            <input type="email" placeholder="Email" class="form-input">
+                            <input type="text" placeholder="Nombre" class="form-input">
+                            <input type="email" placeholder="Email" class="form-input">
+                            <input type="text" placeholder="Nombre" class="form-input">
+                            <button type="submit" class="btn">Enviar</button>
+                        </form>
+                    </div>
+                </section>
             </article>
             <article class="card div12">
                 <h2 class="card__title">12</h2>
@@ -113,41 +147,7 @@
 
         <!-- Extra Components Section -->
         <section class="extra-components">
-            <div class="component-block">
-                <h3>Tabla Responsive</h3>
-                <div class="table-container">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Ana</td>
-                                <td>ana@test.com</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Bob</td>
-                                <td>bob@test.com</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="component-block">
-                <h3>Formulario</h3>
-                <form class="contact-form">
-                    <input type="text" placeholder="Nombre" class="form-input">
-                    <input type="email" placeholder="Email" class="form-input">
-                    <button type="submit" class="btn">Enviar</button>
-                </form>
-            </div>
+         
 
             <!-- Paginador -->
             <nav class="pagination" style="margin-top: 2rem; display: flex; justify-content: center; gap: 0.5rem;">
